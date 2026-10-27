@@ -13,4 +13,9 @@ public class ModBlockEntities {
             TYPES.register("resonator", () -> BlockEntityType.Builder
                     .of(ResonatorBlockEntity::new, ModBlocks.RESONATOR.get())
                     .build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BraneAnchorBlockEntity>> BRANE_ANCHOR =
+            TYPES.register("brane_anchor", () -> BlockEntityType.Builder
+                    .of(BraneAnchorBlockEntity::new, ModBlocks.BRANE_ANCHOR.get())
+                    .build(null));
 }

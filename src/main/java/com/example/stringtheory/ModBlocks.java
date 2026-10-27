@@ -38,4 +38,14 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> 7)
                     .sound(SoundType.AMETHYST));
+
+    /** Якорь браны: телепорт между якорями с одинаково настроенной струной. */
+    public static final DeferredBlock<Block> BRANE_ANCHOR = BLOCKS.registerBlock("brane_anchor",
+            BraneAnchorBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .strength(3.5F, 6.0F)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(BraneAnchorBlock.MODE) > 0 ? 12 : 2)
+                    .sound(SoundType.AMETHYST));
 }

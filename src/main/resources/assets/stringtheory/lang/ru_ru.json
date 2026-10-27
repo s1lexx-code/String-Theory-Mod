@@ -27,5 +27,9 @@
   "hint.stringtheory.higher_near": "Выше — совсем близко",
   "hint.stringtheory.higher_far": "Выше — далеко",
   "hint.stringtheory.lower_near": "Ниже — совсем близко",
-  "hint.stringtheory.lower_far": "Ниже — далеко"
+  "hint.stringtheory.lower_far": "Ниже — далеко",
+  "block.stringtheory.brane_anchor": "Якорь браны",
+  "block.stringtheory.brane_anchor.lore": "Мембрана между мирами тоньше, чем кажется.",
+  "msg.stringtheory.attuned": "Брана откликается: %s",
+  "msg.stringtheory.no_partner": "Брана безмолвна. Второй якорь не отвечает."
 }

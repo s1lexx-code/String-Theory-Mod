@@ -27,5 +27,9 @@
   "hint.stringtheory.higher_near": "Higher - very close",
   "hint.stringtheory.higher_far": "Higher - far",
   "hint.stringtheory.lower_near": "Lower - very close",
-  "hint.stringtheory.lower_far": "Lower - far"
+  "hint.stringtheory.lower_far": "Lower - far",
+  "block.stringtheory.brane_anchor": "Brane Anchor",
+  "block.stringtheory.brane_anchor.lore": "The membrane between worlds is thinner than it seems.",
+  "msg.stringtheory.attuned": "The brane resonates: %s",
+  "msg.stringtheory.no_partner": "The membrane is silent. No second anchor answers."
 }

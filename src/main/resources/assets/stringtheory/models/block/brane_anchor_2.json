@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "stringtheory:block/brane_anchor_top_2",
+    "bottom": "stringtheory:block/brane_anchor_side",
+    "side": "stringtheory:block/brane_anchor_side"
+  }
+}

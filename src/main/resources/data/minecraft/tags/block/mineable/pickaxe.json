@@ -3,6 +3,7 @@
   "values": [
     "stringtheory:string_ore",
     "stringtheory:calabi_stone",
-    "stringtheory:resonator"
+    "stringtheory:resonator",
+    "stringtheory:brane_anchor"
   ]
 }

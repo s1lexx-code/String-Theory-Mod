@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "mode=0": {
+      "model": "stringtheory:block/brane_anchor_0"
+    },
+    "mode=1": {
+      "model": "stringtheory:block/brane_anchor_1"
+    },
+    "mode=2": {
+      "model": "stringtheory:block/brane_anchor_2"
+    },
+    "mode=3": {
+      "model": "stringtheory:block/brane_anchor_3"
+    },
+    "mode=4": {
+      "model": "stringtheory:block/brane_anchor_4"
+    },
+    "mode=5": {
+      "model": "stringtheory:block/brane_anchor_5"
+    }
+  }
+}

@@ -21,6 +21,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.STRING_ORE.get());
                         output.accept(ModItems.CALABI_STONE.get());
                         output.accept(ModItems.RESONATOR.get());
+                        output.accept(ModItems.BRANE_ANCHOR.get());
                     })
                     .build());
 }

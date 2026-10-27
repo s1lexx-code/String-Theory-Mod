@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "stringtheory:calabi_stone",
-    "stringtheory:resonator"
+    "stringtheory:resonator",
+    "stringtheory:brane_anchor"
   ]
 }

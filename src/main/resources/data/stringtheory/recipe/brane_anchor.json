@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "stringtheory:calabi_stone"
+    },
+    "S": {
+      "item": "stringtheory:string_shard"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "SES",
+    "CCC"
+  ],
+  "result": {
+    "id": "stringtheory:brane_anchor",
+    "count": 2
+  }
+}

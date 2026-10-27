@@ -26,4 +26,5 @@ public class ModItems {
     public static final DeferredItem<BlockItem> STRING_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.STRING_ORE);
     public static final DeferredItem<BlockItem> CALABI_STONE = ITEMS.registerSimpleBlockItem(ModBlocks.CALABI_STONE);
     public static final DeferredItem<BlockItem> RESONATOR = ITEMS.registerSimpleBlockItem(ModBlocks.RESONATOR);
+    public static final DeferredItem<BlockItem> BRANE_ANCHOR = ITEMS.registerSimpleBlockItem(ModBlocks.BRANE_ANCHOR);
 }
