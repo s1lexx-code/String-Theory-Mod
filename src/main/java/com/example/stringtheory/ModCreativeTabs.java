@@ -17,6 +17,7 @@ public class ModCreativeTabs {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.STRING_SHARD.get());
                         output.accept(ModItems.TUNING_FORK.get());
+                        ModItems.TUNED_STRINGS.forEach(s -> output.accept(s.get()));
                         output.accept(ModItems.STRING_ORE.get());
                         output.accept(ModItems.CALABI_STONE.get());
                         output.accept(ModItems.RESONATOR.get());

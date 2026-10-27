@@ -9,5 +9,16 @@
   "block.stringtheory.calabi_stone": "Камень Калаби-Яу",
   "block.stringtheory.calabi_stone.lore": "Шесть измерений, свёрнутых до размера кулака.",
   "block.stringtheory.resonator": "Резонатор",
-  "block.stringtheory.resonator.lore": "Это не машина. Это ухо."
+  "block.stringtheory.resonator.lore": "Это не машина. Это ухо.",
+  "item.stringtheory.tuned_string_1": "Струна Типа I",
+  "item.stringtheory.tuned_string_1.lore": "Открытая. Она ищет край, которого нет.",
+  "item.stringtheory.tuned_string_2": "Струна Типа IIA",
+  "item.stringtheory.tuned_string_2.lore": "Замкнутая, как эхо без источника.",
+  "item.stringtheory.tuned_string_3": "Струна Типа IIB",
+  "item.stringtheory.tuned_string_3.lore": "Её зеркальное отражение звучит в другом мире.",
+  "item.stringtheory.tuned_string_4": "Гетеротическая струна SO(32)",
+  "item.stringtheory.tuned_string_4.lore": "Левая половина поёт одно, правая — другое.",
+  "item.stringtheory.tuned_string_5": "Гетеротическая струна E8×E8",
+  "item.stringtheory.tuned_string_5.lore": "Две симметрии, обнявшиеся в тишине.",
+  "gui.stringtheory.hz": "%s Гц"
 }

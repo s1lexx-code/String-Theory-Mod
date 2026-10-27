@@ -9,5 +9,16 @@
   "block.stringtheory.calabi_stone": "Calabi-Yau Stone",
   "block.stringtheory.calabi_stone.lore": "Six dimensions, folded into the size of a fist.",
   "block.stringtheory.resonator": "Resonator",
-  "block.stringtheory.resonator.lore": "It is not a machine. It is an ear."
+  "block.stringtheory.resonator.lore": "It is not a machine. It is an ear.",
+  "item.stringtheory.tuned_string_1": "Type I String",
+  "item.stringtheory.tuned_string_1.lore": "Open. It searches for an end that is not there.",
+  "item.stringtheory.tuned_string_2": "Type IIA String",
+  "item.stringtheory.tuned_string_2.lore": "Closed, like an echo with no source.",
+  "item.stringtheory.tuned_string_3": "Type IIB String",
+  "item.stringtheory.tuned_string_3.lore": "Its mirror image sounds in another world.",
+  "item.stringtheory.tuned_string_4": "Heterotic String SO(32)",
+  "item.stringtheory.tuned_string_4.lore": "The left half sings one song, the right another.",
+  "item.stringtheory.tuned_string_5": "Heterotic String E8×E8",
+  "item.stringtheory.tuned_string_5.lore": "Two symmetries, embracing in silence.",
+  "gui.stringtheory.hz": "%s Hz"
 }

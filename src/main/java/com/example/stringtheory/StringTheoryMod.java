@@ -11,6 +11,8 @@ public class StringTheoryMod {
     public StringTheoryMod(IEventBus modBus) {
         ModBlocks.BLOCKS.register(modBus);
         ModItems.ITEMS.register(modBus);
+        ModBlockEntities.TYPES.register(modBus);
+        ModMenus.MENUS.register(modBus);
         ModCreativeTabs.TABS.register(modBus);
     }
 
