@@ -1,0 +1,26 @@
+{
+  "type": "stringtheory:calabi_yau",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "features": false,
+      "lakes": false,
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 62
+        },
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "stringtheory:calabi_stone",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

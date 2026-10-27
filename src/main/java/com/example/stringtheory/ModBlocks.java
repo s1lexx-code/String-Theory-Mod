@@ -48,4 +48,14 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(BraneAnchorBlock.MODE) > 0 ? 12 : 2)
                     .sound(SoundType.AMETHYST));
+
+    /** Зеркальный якорь: появляется только в измерении Калаби-Яу, не ломается и ничего не роняет. */
+    public static final DeferredBlock<Block> MIRROR_ANCHOR = BLOCKS.registerBlock("mirror_anchor",
+            MirrorAnchorBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .strength(-1.0F, 3600000.0F)
+                    .noLootTable()
+                    .lightLevel(state -> 12)
+                    .sound(SoundType.AMETHYST));
 }

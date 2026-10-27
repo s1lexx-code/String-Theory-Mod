@@ -29,7 +29,12 @@
   "hint.stringtheory.lower_near": "Lower - very close",
   "hint.stringtheory.lower_far": "Lower - far",
   "block.stringtheory.brane_anchor": "Brane Anchor",
-  "block.stringtheory.brane_anchor.lore": "The membrane between worlds is thinner than it seems.",
+  "block.stringtheory.brane_anchor.lore": "Crouch upon it, and the membrane grows thinner.",
   "msg.stringtheory.attuned": "The brane resonates: %s",
-  "msg.stringtheory.no_partner": "The membrane is silent. No second anchor answers."
+  "msg.stringtheory.no_partner": "The membrane is silent. No second anchor answers.",
+  "block.stringtheory.mirror_anchor": "Mirror Anchor",
+  "msg.stringtheory.folded": "The world folds. You are inside.",
+  "msg.stringtheory.unfolded": "The world unfolds.",
+  "msg.stringtheory.no_dimension": "The fold will not open: dimension unavailable.",
+  "msg.stringtheory.wrapped": "The horizon has closed upon itself."
 }

@@ -29,7 +29,12 @@
   "hint.stringtheory.lower_near": "Ниже — совсем близко",
   "hint.stringtheory.lower_far": "Ниже — далеко",
   "block.stringtheory.brane_anchor": "Якорь браны",
-  "block.stringtheory.brane_anchor.lore": "Мембрана между мирами тоньше, чем кажется.",
+  "block.stringtheory.brane_anchor.lore": "Присядьте на нём — и мембрана станет тоньше.",
   "msg.stringtheory.attuned": "Брана откликается: %s",
-  "msg.stringtheory.no_partner": "Брана безмолвна. Второй якорь не отвечает."
+  "msg.stringtheory.no_partner": "Брана безмолвна. Второй якорь не отвечает.",
+  "block.stringtheory.mirror_anchor": "Зеркальный якорь",
+  "msg.stringtheory.folded": "Мир складывается. Вы внутри.",
+  "msg.stringtheory.unfolded": "Мир разворачивается.",
+  "msg.stringtheory.no_dimension": "Складка не раскрывается: измерение недоступно.",
+  "msg.stringtheory.wrapped": "Горизонт замкнулся на самом себе."
 }

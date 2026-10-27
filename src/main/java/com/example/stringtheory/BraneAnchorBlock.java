@@ -45,6 +45,11 @@ public class BraneAnchorBlock extends BaseEntityBlock {
         builder.add(MODE);
     }
 
+    /** Зеркальные якоря (в измерении Калаби-Яу) нельзя настраивать и они ничего не роняют. */
+    protected boolean isMirror() {
+        return false;
+    }
+
     @Override
     protected RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
@@ -68,6 +73,9 @@ public class BraneAnchorBlock extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
                                               Player player, InteractionHand hand, BlockHitResult hit) {
+        if (isMirror()) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
         int mode = tunedMode(stack);
         if (mode > 0 && state.getValue(MODE) == 0) {
             if (level instanceof ServerLevel server) {
@@ -88,7 +96,7 @@ public class BraneAnchorBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         int mode = state.getValue(MODE);
-        if (mode == 0) {
+        if (isMirror() || mode == 0) {
             return InteractionResult.PASS;
         }
         if (level instanceof ServerLevel server) {
@@ -105,7 +113,7 @@ public class BraneAnchorBlock extends BaseEntityBlock {
 
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock())) {
+        if (!state.is(newState.getBlock()) && !isMirror()) {
             int mode = state.getValue(MODE);
             if (mode > 0 && level instanceof ServerLevel server) {
                 BraneNetwork.get(server.getServer()).remove(mode, GlobalPos.of(level.dimension(), pos));

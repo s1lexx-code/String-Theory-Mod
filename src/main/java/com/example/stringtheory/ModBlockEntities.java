@@ -16,6 +16,6 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BraneAnchorBlockEntity>> BRANE_ANCHOR =
             TYPES.register("brane_anchor", () -> BlockEntityType.Builder
-                    .of(BraneAnchorBlockEntity::new, ModBlocks.BRANE_ANCHOR.get())
+                    .of(BraneAnchorBlockEntity::new, ModBlocks.BRANE_ANCHOR.get(), ModBlocks.MIRROR_ANCHOR.get())
                     .build(null));
 }
