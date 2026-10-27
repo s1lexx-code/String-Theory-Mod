@@ -20,5 +20,12 @@
   "item.stringtheory.tuned_string_4.lore": "Левая половина поёт одно, правая — другое.",
   "item.stringtheory.tuned_string_5": "Гетеротическая струна E8×E8",
   "item.stringtheory.tuned_string_5.lore": "Две симметрии, обнявшиеся в тишине.",
-  "gui.stringtheory.hz": "%s Гц"
+  "gui.stringtheory.hz": "%s Гц",
+  "gui.stringtheory.fork": "Ударить",
+  "gui.stringtheory.fork.tip": "Нужен камертон в инвентаре",
+  "hint.stringtheory.unison": "В унисон!",
+  "hint.stringtheory.higher_near": "Выше — совсем близко",
+  "hint.stringtheory.higher_far": "Выше — далеко",
+  "hint.stringtheory.lower_near": "Ниже — совсем близко",
+  "hint.stringtheory.lower_far": "Ниже — далеко"
 }

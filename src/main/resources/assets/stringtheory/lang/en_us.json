@@ -20,5 +20,12 @@
   "item.stringtheory.tuned_string_4.lore": "The left half sings one song, the right another.",
   "item.stringtheory.tuned_string_5": "Heterotic String E8×E8",
   "item.stringtheory.tuned_string_5.lore": "Two symmetries, embracing in silence.",
-  "gui.stringtheory.hz": "%s Hz"
+  "gui.stringtheory.hz": "%s Hz",
+  "gui.stringtheory.fork": "Strike",
+  "gui.stringtheory.fork.tip": "Requires a Tuning Fork in your inventory",
+  "hint.stringtheory.unison": "In unison!",
+  "hint.stringtheory.higher_near": "Higher - very close",
+  "hint.stringtheory.higher_far": "Higher - far",
+  "hint.stringtheory.lower_near": "Lower - very close",
+  "hint.stringtheory.lower_far": "Lower - far"
 }

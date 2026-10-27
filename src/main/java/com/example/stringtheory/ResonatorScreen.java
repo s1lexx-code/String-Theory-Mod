@@ -3,6 +3,7 @@ package com.example.stringtheory;
 import net.minecraft.Util;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
@@ -13,6 +14,8 @@ import net.minecraft.world.inventory.Slot;
 
 public class ResonatorScreen extends AbstractContainerScreen<ResonatorMenu> {
     private int soundTimer;
+    private Button forkButton;
+    private static final String[] HINT_KEYS = {"", "unison", "higher_near", "higher_far", "lower_near", "lower_far"};
 
     public ResonatorScreen(ResonatorMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
@@ -28,6 +31,15 @@ public class ResonatorScreen extends AbstractContainerScreen<ResonatorMenu> {
         addButton(1, "-1", 38);
         addButton(2, "+1", 110);
         addButton(3, "+10", 140);
+
+        forkButton = Button.builder(Component.translatable("gui.stringtheory.fork"), b -> {
+            if (minecraft != null && minecraft.gameMode != null) {
+                minecraft.gameMode.handleInventoryButtonClick(menu.containerId, ResonatorMenu.FORK_BUTTON);
+            }
+        }).bounds(leftPos + 62, topPos + 90, 52, 14)
+          .tooltip(Tooltip.create(Component.translatable("gui.stringtheory.fork.tip")))
+          .build();
+        addRenderableWidget(forkButton);
     }
 
     private void addButton(int id, String label, int relX) {
@@ -41,6 +53,9 @@ public class ResonatorScreen extends AbstractContainerScreen<ResonatorMenu> {
     @Override
     protected void containerTick() {
         super.containerTick();
+        if (forkButton != null && minecraft != null && minecraft.player != null) {
+            forkButton.active = minecraft.player.getInventory().countItem(ModItems.TUNING_FORK.get()) > 0;
+        }
         int proximity = menu.getProximity();
         if (proximity > 0 && ++soundTimer >= 8 && minecraft != null) {
             soundTimer = 0;
@@ -100,6 +115,12 @@ public class ResonatorScreen extends AbstractContainerScreen<ResonatorMenu> {
         g.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, 0xFF8A7BC0, false);
         g.drawCenteredString(font, Component.translatable("gui.stringtheory.hz", menu.getFrequency()),
                 88, 54, 0xFFFFFFFF);
+
+        int hint = menu.getHint();
+        if (hint > 0 && hint < HINT_KEYS.length) {
+            g.drawCenteredString(font, Component.translatable("hint.stringtheory." + HINT_KEYS[hint]),
+                    88, 65, hint == 1 ? 0xFF60F0FF : 0xFFC9B8FF);
+        }
     }
 
     private static int blend(int a, int b, float t) {

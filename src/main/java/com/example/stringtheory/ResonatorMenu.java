@@ -8,12 +8,15 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.SlotItemHandler;
 
 public class ResonatorMenu extends AbstractContainerMenu {
     private static final int[] BUTTON_DELTAS = {-10, -1, 1, 10};
+    public static final int FORK_BUTTON = 4;
+    private static final int FORK_COOLDOWN = 60;
 
     private final ResonatorBlockEntity blockEntity;
     private final ContainerData data;
@@ -23,7 +26,7 @@ public class ResonatorMenu extends AbstractContainerMenu {
     public ResonatorMenu(int id, Inventory inventory, FriendlyByteBuf buf) {
         this(id, inventory,
                 (ResonatorBlockEntity) inventory.player.level().getBlockEntity(buf.readBlockPos()),
-                new SimpleContainerData(3));
+                new SimpleContainerData(4));
     }
 
     /** Серверный конструктор. */
@@ -66,8 +69,20 @@ public class ResonatorMenu extends AbstractContainerMenu {
         return data.get(2);
     }
 
+    public int getHint() {
+        return data.get(3);
+    }
+
     @Override
     public boolean clickMenuButton(Player player, int id) {
+        if (id == FORK_BUTTON) {
+            Item fork = ModItems.TUNING_FORK.get();
+            if (player.getInventory().countItem(fork) > 0 && !player.getCooldowns().isOnCooldown(fork)) {
+                player.getCooldowns().addCooldown(fork, FORK_COOLDOWN);
+                blockEntity.strikeFork(player);
+            }
+            return true;
+        }
         if (id < 0 || id >= BUTTON_DELTAS.length) {
             return false;
         }

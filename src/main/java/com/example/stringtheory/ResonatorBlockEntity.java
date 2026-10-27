@@ -43,6 +43,7 @@ public class ResonatorBlockEntity extends BlockEntity implements MenuProvider {
     private int frequency = 500;
     private int proximity;
     private int progress;
+    private int hint; // 0 нет, 1 унисон, 2/3 выше (близко/далеко), 4/5 ниже (близко/далеко)
 
     public final ContainerData data = new ContainerData() {
         @Override
@@ -51,6 +52,7 @@ public class ResonatorBlockEntity extends BlockEntity implements MenuProvider {
                 case 0 -> frequency;
                 case 1 -> proximity;
                 case 2 -> progress;
+                case 3 -> hint;
                 default -> 0;
             };
         }
@@ -61,13 +63,14 @@ public class ResonatorBlockEntity extends BlockEntity implements MenuProvider {
                 case 0 -> frequency = value;
                 case 1 -> proximity = value;
                 case 2 -> progress = value;
+                case 3 -> hint = value;
                 default -> { }
             }
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
     };
 
@@ -91,7 +94,34 @@ public class ResonatorBlockEntity extends BlockEntity implements MenuProvider {
 
     public void adjustFrequency(int delta) {
         frequency = Mth.clamp(frequency + delta, 0, MAX_FREQUENCY);
+        hint = 0;
         setChanged();
+    }
+
+    /** Подсказка камертона: куда крутить частоту и насколько далеко до ближайшей из пяти. */
+    public void strikeFork(Player player) {
+        if (!(level instanceof ServerLevel server)) {
+            return;
+        }
+        int[] targets = modeFrequencies(server.getSeed());
+        int best = 0;
+        int bestDist = Integer.MAX_VALUE;
+        for (int i = 0; i < targets.length; i++) {
+            int dist = Math.abs(frequency - targets[i]);
+            if (dist < bestDist) {
+                bestDist = dist;
+                best = i;
+            }
+        }
+        if (bestDist <= TOLERANCE) {
+            hint = 1;
+        } else {
+            boolean higher = targets[best] > frequency;
+            boolean near = bestDist <= AUDIBLE_RANGE;
+            hint = higher ? (near ? 2 : 3) : (near ? 4 : 5);
+        }
+        server.playSound(null, worldPosition, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS,
+                1.0F, 0.5F + targets[best] / 1000.0F * 1.5F);
     }
 
     public void dropContents() {
