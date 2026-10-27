@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "stringtheory:string_shard"
+    }
+  },
+  "pattern": [
+    "I I",
+    "I I",
+    " S "
+  ],
+  "result": {
+    "id": "stringtheory:tuning_fork",
+    "count": 1
+  }
+}

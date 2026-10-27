@@ -1,0 +1,13 @@
+{
+  "itemGroup.stringtheory": "Теория струн",
+  "item.stringtheory.string_shard": "Осколок струны",
+  "item.stringtheory.string_shard.lore": "Гудит, когда его никто не слушает.",
+  "item.stringtheory.tuning_fork": "Камертон",
+  "item.stringtheory.tuning_fork.lore": "Ударишь — и что-то отзовётся издалека.",
+  "block.stringtheory.string_ore": "Струнная руда",
+  "block.stringtheory.string_ore.lore": "Внутри что-то дрожит.",
+  "block.stringtheory.calabi_stone": "Камень Калаби-Яу",
+  "block.stringtheory.calabi_stone.lore": "Шесть измерений, свёрнутых до размера кулака.",
+  "block.stringtheory.resonator": "Резонатор",
+  "block.stringtheory.resonator.lore": "Это не машина. Это ухо."
+}

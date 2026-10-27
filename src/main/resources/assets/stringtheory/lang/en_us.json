@@ -1,0 +1,13 @@
+{
+  "itemGroup.stringtheory": "String Theory",
+  "item.stringtheory.string_shard": "String Shard",
+  "item.stringtheory.string_shard.lore": "It hums when no one is listening.",
+  "item.stringtheory.tuning_fork": "Tuning Fork",
+  "item.stringtheory.tuning_fork.lore": "Strike it, and something answers from far away.",
+  "block.stringtheory.string_ore": "String Ore",
+  "block.stringtheory.string_ore.lore": "Something inside is vibrating.",
+  "block.stringtheory.calabi_stone": "Calabi-Yau Stone",
+  "block.stringtheory.calabi_stone.lore": "Six dimensions, folded into the size of a fist.",
+  "block.stringtheory.resonator": "Resonator",
+  "block.stringtheory.resonator.lore": "It is not a machine. It is an ear."
+}

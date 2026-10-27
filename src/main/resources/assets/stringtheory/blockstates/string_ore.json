@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "stringtheory:block/string_ore"
+    }
+  }
+}

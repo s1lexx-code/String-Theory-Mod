@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "stringtheory:string_ore",
+    "stringtheory:calabi_stone",
+    "stringtheory:resonator"
+  ]
+}
